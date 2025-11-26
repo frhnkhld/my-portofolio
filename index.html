@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farhan Kholid - Front-End Developer & Graphic Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Mengimpor custom CSS untuk monogram, smooth scroll, dll. */
+        @import url('assets/css/style.css');
+        /* Set font Inter sebagai default Tailwind */
+        :root {
+            --color-army-dark: #1E2D2B;
+            --color-white: #ffffff;
+        }
+        .text-army { color: var(--color-army-dark); }
+        .bg-army { background-color: var(--color-army-dark); }
+        .border-army-light { border-color: #4A6E6A; } /* Light Army Green for accents */
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Inconsolata', 'monospace'], /* Untuk nuansa retro */
+                    },
+                    colors: {
+                        'army-dark': '#1E2D2B',
+                        'army-light': '#4A6E6A',
+                        'accent-gray': '#F3F4F6', /* Light gray card background */
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-white text-gray-900 font-sans min-h-screen">
+
+    <header class="sticky top-0 z-40 w-full bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-extrabold text-army tracking-tight">FK</a>
+                
+                <nav class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-army-dark hover:text-army-light transition duration-150 border-b-2 border-transparent hover:border-army-light pb-1">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-army-light transition duration-150 border-b-2 border-transparent hover:border-army-light pb-1">About</a>
+                    <a href="portfolio-frontend.html" class="text-gray-600 hover:text-army-light transition duration-150 border-b-2 border-transparent hover:border-army-light pb-1">Front-End Portfolio</a>
+                    <a href="portfolio-graphic.html" class="text-gray-600 hover:text-army-light transition duration-150 border-b-2 border-transparent hover:border-army-light pb-1">Graphic Design Portfolio</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-army-light transition duration-150 border-b-2 border-transparent hover:border-army-light pb-1">Contact</a>
+                </nav>
+
+                <button id="mobile-menu-button" class="md:hidden p-2 text-army-dark hover:text-army-light transition duration-150 rounded-md border border-army-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <nav id="mobile-menu" class="hidden md:hidden bg-white/95 border-t border-gray-200 py-2">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-army-dark hover:bg-army-dark hover:text-white transition duration-150">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-army-dark hover:text-white transition duration-150">About</a>
+                <a href="portfolio-frontend.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-army-dark hover:text-white transition duration-150">Front-End Portfolio</a>
+                <a href="portfolio-graphic.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-army-dark hover:text-white transition duration-150">Graphic Design Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-army-dark hover:text-white transition duration-150">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="relative overflow-hidden">
+        <div class="monogram-bg">FK</div>
+
+        <section class="min-h-screen flex items-center justify-center text-white bg-army-dark py-20 px-4">
+            <div class="text-center fade-in-up">
+                <p class="text-lg uppercase tracking-widest mb-4 opacity-75">Hi, I'm</p>
+                <h1 class="text-7xl sm:text-8xl lg:text-9xl font-extrabold tracking-tighter mb-8 transition-all duration-500">
+                    FARHAN KHOLID
+                </h1>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-12">
+                    <div class="text-2xl sm:text-3xl font-mono border-2 border-white rounded-full px-6 py-2 transition-transform duration-300 hover:scale-105 hover:bg-white/10">
+                        Front-End Developer
+                    </div>
+                    <div class="text-2xl sm:text-3xl font-mono border-2 border-white rounded-full px-6 py-2 transition-transform duration-300 hover:scale-105 hover:bg-white/10">
+                        Graphic Designer
+                    </div>
+                </div>
+
+                <div class="space-y-4 sm:space-y-0 sm:space-x-6 flex flex-col sm:flex-row justify-center">
+                    <a href="portfolio-frontend.html" class="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-lg text-army-dark bg-white hover:bg-gray-100 transition duration-300 shadow-xl border border-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code mr-2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        View Front-End Portfolio
+                    </a>
+                    <a href="portfolio-graphic.html" class="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-lg text-white border-2 border-white hover:bg-white/20 transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette mr-2"><path d="M12 19l8.35-8.35a2.07 2.07 0 0 0-2.94-2.94L7.06 14.06a1.5 1.5 0 0 1-2.12-2.12l8.5-8.5a2.07 2.07 0 0 0-2.94-2.94L1.93 7.07a1.5 1.5 0 0 0 0 2.12l10 10a1.5 1.5 0 0 0 2.12 0l-5-5a1.5 1.5 0 0 1 0-2.12L15 4"/><path d="M16 4h.01"/><path d="M4 16v.01"/></svg>
+                        View Graphic Design Portfolio
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 fade-in-up">Quick Overview</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center fade-in-up">
+                <div class="p-6 rounded-xl border border-gray-200 shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket mx-auto mb-4 text-army-light"><path d="M4.5 5.5l5 5"/><path d="M12 2l1.3 2.9A4.5 4.5 0 0 1 12 9.5a4.5 4.5 0 0 1-1.3-2.9L9 2"/><path d="M17 19.5l-5-5"/><path d="M18.8 6.2a2.12 2.12 0 0 0 3 3L16 14l-2 2-3 3-2-2-4-4"/></svg>
+                    <h3 class="text-xl font-semibold mb-2">Vision & Mission</h3>
+                    <p class="text-gray-600">Creating digital experiences that are intuitive, functional, and aesthetic.</p>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-200 shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-dot mx-auto mb-4 text-army-light"><circle cx="12" cy="12" r="1"/><path d="M19.5 22.5h-15a2 2 0 0 1-2-2v-12a2 2 0 0 1 2-2h15a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2z"/><path d="M12 17v-1.5"/></svg>
+                    <h3 class="text-xl font-semibold mb-2">Technical Expertise</h3>
+                    <p class="text-gray-600">Focused on HTML, Tailwind CSS, Vanilla JS, and Adobe Creative Suite tools.</p>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-200 shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle mx-auto mb-4 text-army-light"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                    <h3 class="text-xl font-semibold mb-2">Collaboration</h3>
+                    <p class="text-gray-600">Open to project collaboration, both in development and visual design.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12 fade-in-up">
+                <a href="about.html" class="text-army-dark font-medium border-b border-army-dark hover:border-army-light transition duration-150">Read more about Farhan Kholid &rarr;</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <div class="mb-4 space-x-4">
+                <a href="https://www.linkedin.com/in/farhan-kholid-8115b9202/" class="hover:text-army-dark transition duration-150" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5 inline-block"></i></a>
+                <a href="https://www.instagram.com/frhnkhld_" class="hover:text-army-dark transition duration-150" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5 inline-block"></i></a>
+                <a href="https://github.com/frhnkhld" class="hover:text-army-dark transition duration-150" aria-label="GitHub"><i data-lucide="github" class="w-5 h-5 inline-block"></i></a>
+            </div>
+            <p>&copy; 2025 Farhan Kholid. Retro-Modern Portfolio.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Inisialisasi ikon Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>
