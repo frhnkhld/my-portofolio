@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design Portfolio - Farhan Kholid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('assets/css/style.css');
+        :root {
+            --color-army-dark: #1E2D2B;
+            --color-white: #ffffff;
+        }
+        .text-army { color: var(--color-army-dark); }
+        .bg-army { background-color: var(--color-army-dark); }
+        .border-army-light { border-color: #4A6E6A; }
+        /* Style khusus untuk Breadcrumb */
+        .breadcrumb-separator {
+            content: '';
+            width: 1px;
+            height: 12px;
+            background-color: #D1D5DB; /* gray-300 */
+            margin: 0 1rem;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Inconsolata', 'monospace'],
+                    },
+                    colors: {
+                        'army-dark': '#1E2D2B',
+                        'army-light': '#4A6E6A',
+                        'accent-gray': '#F3F4F6',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-accent-gray text-gray-900 font-sans min-h-screen">
+
+    <header class="sticky top-0 z-40 w-full bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-extrabold text-army-dark tracking-tight">FK</a>
+                <nav class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-gray-600 hover:text-army-light transition duration-150 border-b-2 border-transparent hover:border-army-light pb-1">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-army-light transition duration-150 border-b-2 border-transparent hover:border-army-light pb-1">About</a>
+                    <a href="portfolio-frontend.html" class="text-gray-600 hover:text-army-light transition duration-150 border-b-2 border-transparent hover:border-army-light pb-1">Front-End Portfolio</a>
+                    <a href="portfolio-graphic.html" class="text-army-dark hover:text-army-light transition duration-150 border-b-2 border-army-dark pb-1">Graphic Design Portfolio</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-army-light transition duration-150 border-b-2 border-transparent hover:border-army-light pb-1">Contact</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden p-2 text-army-dark hover:text-army-light transition duration-150 rounded-md border border-army-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+        <nav id="mobile-menu" class="hidden md:hidden bg-white/95 border-t border-gray-200 py-2">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-army-dark hover:text-white transition duration-150">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-army-dark hover:text-white transition duration-150">About</a>
+                <a href="portfolio-frontend.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-army-dark hover:text-white transition duration-150">Front-End Portfolio</a>
+                <a href="portfolio-graphic.html" class="block px-3 py-2 rounded-md text-base font-medium text-army-dark hover:bg-army-dark hover:text-white transition duration-150">Graphic Design Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-army-dark hover:text-white transition duration-150">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="relative overflow-hidden pt-10 pb-20">
+        <div class="monogram-bg">FK</div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-5xl font-extrabold text-army-dark mb-4 fade-in-up">Graphic Design Portfolio</h1>
+            <p class="text-xl text-gray-600 mb-8 fade-in-up">A collection of visual works spanning brand identity, social media content, and 3D assets.</p>
+
+            <nav class="bg-white p-4 rounded-xl shadow-lg border border-gray-200 mb-12 fade-in-up">
+                <ul class="flex flex-wrap justify-center items-center text-sm font-medium text-gray-600 space-y-2 sm:space-y-0">
+                    <li class="flex items-center">
+                        <a href="#logo-section" class="flex items-center hover:text-army-dark transition duration-150">
+                            <i data-lucide="bookmark" class="w-4 h-4 mr-1 text-army-light"></i> Logo & Branding
+                        </a>
+                        <div class="breadcrumb-separator ml-4 hidden sm:block"></div>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="#social-section" class="flex items-center hover:text-army-dark transition duration-150">
+                            <i data-lucide="instagram" class="w-4 h-4 mr-1 text-army-light"></i> Social Media
+                        </a>
+                        <div class="breadcrumb-separator ml-4 hidden sm:block"></div>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="#print-section" class="flex items-center hover:text-army-dark transition duration-150">
+                            <i data-lucide="printer" class="w-4 h-4 mr-1 text-army-light"></i> Print & Promotional
+                        </a>
+                        <div class="breadcrumb-separator ml-4 hidden sm:block"></div>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="#3d-section" class="flex items-center hover:text-army-dark transition duration-150">
+                            <i data-lucide="shapes" class="w-4 h-4 mr-1 text-army-light"></i> 3D Visualization
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                
+                <h2 id="logo-section" class="text-3xl font-bold text-army-dark mb-6 mt-10 col-span-full fade-in-up">Logo & Branding</h2>
+
+                <a href="#" class="portfolio-item group relative overflow-hidden rounded-xl shadow-md border-2 border-white hover:shadow-xl transition duration-300 col-span-1 fade-in-up" 
+                   data-title="UI Mockup Project" 
+                   data-desc="This project involved designing a clean UI concept focused on user accessibility and minimalist aesthetic, using Figma."
+                   data-img="https://placehold.co/800x600/1E2D2B/FFFFFF?text=UI+Mockup">
+                    <img src="https://placehold.co/400x400/1E2D2B/FFFFFF?text=UI+Mockup" alt="UI Mockup Project" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-army-dark/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white text-lg font-bold">UI Mockup</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="portfolio-item group relative overflow-hidden rounded-xl shadow-md border-2 border-white hover:shadow-xl transition duration-300 col-span-1 fade-in-up">
+                    <img src="https://placehold.co/400x250/1E2D2B/F3F4F6?text=Brand+Identity" alt="Brand Identity Mockup" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-army-dark/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white text-lg font-bold">Brand Identity</span>
+                    </div>
+                </a>
+                
+                <h2 id="social-section" class="text-3xl font-bold text-army-dark mb-6 mt-10 col-span-full fade-in-up">Social Media</h2>
+
+                <a href="#" class="portfolio-item group relative overflow-hidden rounded-xl shadow-md border-2 border-white hover:shadow-xl transition duration-300 col-span-1 fade-in-up">
+                    <img src="https://placehold.co/400x600/4A6E6A/FFFFFF?text=We+Are+Hiring+Poster" alt="We Are Hiring Poster" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-army-dark/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white text-lg font-bold">Hiring Poster</span>
+                    </div>
+                </a>
+
+                <a href="#" class="portfolio-item group relative overflow-hidden rounded-xl shadow-md border-2 border-white hover:shadow-xl transition duration-300 col-span-2 md:col-span-1 fade-in-up">
+                    <img src="https://placehold.co/800x400/4A6E6A/1E2D2B?text=Social+Media+Banner" alt="Social Media Banner" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-army-dark/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white text-lg font-bold">Banner Promo</span>
+                    </div>
+                </a>
+                <h2 id="print-section" class="text-3xl font-bold text-army-dark mb-6 mt-10 col-span-full fade-in-up">Print & Promotional</h2>
+
+                <a href="#" class="portfolio-item group relative overflow-hidden rounded-xl shadow-md border-2 border-white hover:shadow-xl transition duration-300 col-span-1 fade-in-up">
+                    <img src="https://placehold.co/400x300/1E2D2B/F3F4F6?text=Promotional+Content" alt="Promotional Content" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-army-dark/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white text-lg font-bold">Promo Card</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="portfolio-item group relative overflow-hidden rounded-xl shadow-md border-2 border-white hover:shadow-xl transition duration-300 col-span-1 fade-in-up">
+                    <img src="https://placehold.co/400x550/1E2D2B/F3F4F6?text=Infographic" alt="Infographic" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-army-dark/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white text-lg font-bold">Infographic</span>
+                    </div>
+                </a>
+                <h2 id="3d-section" class="text-3xl font-bold text-army-dark mb-6 mt-10 col-span-full fade-in-up">3D Visualization</h2>
+
+                <a href="#" class="portfolio-item group relative overflow-hidden rounded-xl shadow-md border-2 border-white hover:shadow-xl transition duration-300 col-span-1 fade-in-up">
+                    <img src="https://placehold.co/400x500/6B7280/FFFFFF?text=3D+Asset" alt="3D Asset" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-army-dark/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white text-lg font-bold">3D Render</span>
+                    </div>
+                </a>
+                </div>
+        </div>
+    </main>
+
+    <div id="portfolio-modal" class="hidden fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[95vh] overflow-y-auto relative transform transition-all duration-300 scale-90 opacity-0" id="modal-content-wrapper">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-army-dark transition duration-150 z-10">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            
+            <div id="modal-content-container">
+                </div>
+        </div>
+    </div>
+    
+    <footer class="bg-white border-t border-gray-200 py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <div class="mb-4 space-x-4">
+                <a href="https://www.linkedin.com/in/farhan-kholid-8115b9202/" class="hover:text-army-dark transition duration-150" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5 inline-block"></i></a>
+                <a href="https://www.instagram.com/frhnkhld_" class="hover:text-army-dark transition duration-150" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5 inline-block"></i></a>
+                <a href="https://github.com/frhnkhld" class="hover:text-army-dark transition duration-150" aria-label="GitHub"><i data-lucide="github" class="w-5 h-5 inline-block"></i></a>
+            </div>
+            <p>&copy; 2025 Farhan Kholid. Retro-Modern Portfolio.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // INISIALISASI LUCIDE ICONS
+        lucide.createIcons();
+        
+        // LOGIC MODAL (LIGHTBOX)
+        // LOGIC MODAL (LIGHTBOX)
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('portfolio-modal');
+        const modalWrapper = document.getElementById('modal-content-wrapper');
+        const closeModalButton = document.getElementById('close-modal');
+        const contentContainer = document.getElementById('modal-content-container');
+        const portfolioLinks = document.querySelectorAll('.portfolio-item');
+
+        // Fungsi untuk membuka modal
+        const openModal = (e) => {
+            e.preventDefault(); // Mencegah tautan default
+            
+            const title = e.currentTarget.getAttribute('data-title');
+            const desc = e.currentTarget.getAttribute('data-desc') || 'No description provided for this design work.';
+            const imgUrl = e.currentTarget.querySelector('img').src.replace('400x400', '800x600').replace('400x600', '800x1200'); // Mengganti placeholder ke ukuran lebih besar
+            
+            // KONTEN BARU: TATA LETAK GRID KIRI-KANAN RESPONSIVE
+            contentContainer.innerHTML = `
+                <div class="grid md:grid-cols-2 gap-6 items-start p-6">
+                    <div class="md:col-span-1">
+                        <img src="${imgUrl}" alt="${title}" class="w-full h-auto rounded-xl shadow-lg">
+                    </div>
+                    <div class="md:col-span-1">
+                        <h3 class="text-3xl font-extrabold text-army-dark mb-3">${title}</h3>
+                        <p class="text-gray-700 mb-4">${desc}</p>
+                        <p class="text-sm font-medium text-gray-500 border-t pt-3 mt-4">Tools Used: Adobe Illustrator, Adobe Photoshop, etc.</p>
+                    </div>
+                </div>
+            `;
+            // AKHIR KONTEN BARU
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Mencegah scrolling body
+            
+            // Transisi
+            setTimeout(() => {
+                modalWrapper.classList.remove('scale-90', 'opacity-0');
+                modalWrapper.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        };
+
+        // Fungsi untuk menutup modal
+        const closeModal = () => {
+            modalWrapper.classList.add('scale-90', 'opacity-0');
+            modalWrapper.classList.remove('scale-100', 'opacity-100');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = ''; // Mengaktifkan scrolling body
+            }, 300); // Sesuai dengan durasi transisi Tailwind
+        };
+
+        // Tambahkan event listener ke setiap item portofolio
+        portfolioLinks.forEach(link => {
+            link.addEventListener('click', openModal);
+        });
+
+        // Tambahkan event listener ke tombol tutup
+        closeModalButton.addEventListener('click', closeModal);
+
+        // Menutup modal jika klik di luar modal (di background hitam)
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // LOGIC MENU MOBILE
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    });
+    </script>
+</body>
+</html>

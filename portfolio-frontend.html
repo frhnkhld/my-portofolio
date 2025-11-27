@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End Portfolio - Farhan Kholid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('assets/css/style.css');
+        :root {
+            --color-army-dark: #1E2D2B;
+            --color-white: #ffffff;
+        }
+        .text-army { color: var(--color-army-dark); }
+        .bg-army { background-color: var(--color-army-dark); }
+        .border-army-light { border-color: #4A6E6A; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Inconsolata', 'monospace'],
+                    },
+                    colors: {
+                        'army-dark': '#1E2D2B',
+                        'army-light': '#4A6E6A',
+                        'accent-gray': '#F3F4F6',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-accent-gray text-gray-900 font-sans min-h-screen">
+
+    <header class="sticky top-0 z-40 w-full bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-extrabold text-army-dark tracking-tight">FK</a>
+                <nav class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-gray-600 hover:text-army-light transition duration-150 border-b-2 border-transparent hover:border-army-light pb-1">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-army-light transition duration-150 border-b-2 border-transparent hover:border-army-light pb-1">About</a>
+                    <a href="portfolio-frontend.html" class="text-army-dark hover:text-army-light transition duration-150 border-b-2 border-army-dark pb-1">Front-End Portfolio</a>
+                    <a href="portfolio-graphic.html" class="text-gray-600 hover:text-army-light transition duration-150 border-b-2 border-transparent hover:border-army-light pb-1">Graphic Design Portfolio</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-army-light transition duration-150 border-b-2 border-transparent hover:border-army-light pb-1">Contact</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden p-2 text-army-dark hover:text-army-light transition duration-150 rounded-md border border-army-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+        <nav id="mobile-menu" class="hidden md:hidden bg-white/95 border-t border-gray-200 py-2">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-start">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-army-dark hover:text-white transition duration-150">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-army-dark hover:text-white transition duration-150">About</a>
+                <a href="portfolio-frontend.html" class="block px-3 py-2 rounded-md text-base font-medium text-army-dark hover:bg-army-dark hover:text-white transition duration-150">Front-End Portfolio</a>
+                <a href="portfolio-graphic.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-army-dark hover:text-white transition duration-150">Graphic Design Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-army-dark hover:text-white transition duration-150">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="relative overflow-hidden pt-10 pb-20">
+        <div class="monogram-bg">FK</div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-5xl font-extrabold text-army-dark mb-4 fade-in-up">Front-End Portfolio</h1>
+            <p class="text-xl text-gray-600 mb-12 fade-in-up">A collection of projects built using foundational skills (HTML, Vanilla JS) and modern frameworks (React.js), demonstrating capability in both static and dynamic applications.</p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- PORTOFOLIO 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-[1.02] fade-in-up">
+                    <img src="img/porto-fe_1.png" alt="Preview Mono Stock" class="w-full h-48 object-cover border-b border-gray-100">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-army-dark mb-2">Mono Stock - Minimalist Inventory Dashboard</h2>
+                        <p class="text-gray-600 text-sm mb-4">A minimalist inventory dashboard built exclusively with core web technologies. It demonstrates advanced mastery of Modular JavaScript, efficient DOM manipulation, and custom data visualization using the HTML5s Canvas API (No frameworks or external libraries used).</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-mono bg-army-dark text-white px-2 py-0.5 rounded-full">Vanilla JS (ES6+)</span>
+                            <span class="text-xs font-mono bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">HTML5 Canvas</span>
+                            <span class="text-xs font-mono bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">Modular JS</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <a href="https://frhnkhld.github.io/Mono-Inventory-Dashboard/" class="text-army-light hover:text-army-dark transition duration-150 flex items-center">
+                                <i data-lucide="monitor" class="w-4 h-4 mr-1"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/frhnkhld/Mono-Inventory-Dashboard" class="text-gray-500 hover:text-army-dark transition duration-150 flex items-center">
+                                <i data-lucide="github" class="w-4 h-4 mr-1"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTO 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-[1.02] fade-in-up">
+                    <img src="https://placehold.co/600x400/1E2D2B/FFFFFF?text=E-Commerce+UI" alt="Preview E-Commerce UI" class="w-full h-48 object-cover border-b border-gray-100">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-army-dark mb-2">Modern E-Commerce Checkout</h2>
+                        <p class="text-gray-600 text-sm mb-4">Implementation of a shopping cart and checkout process, focusing on speed, accessibility, and mobile responsiveness.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-mono bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">HTML</span>
+                            <span class="text-xs font-mono bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">Tailwind</span>
+                            <span class="text-xs font-mono bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">Vanilla JS</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <a href="#" class="text-army-light hover:text-army-dark transition duration-150 flex items-center">
+                                <i data-lucide="monitor" class="w-4 h-4 mr-1"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-army-dark transition duration-150 flex items-center">
+                                <i data-lucide="github" class="w-4 h-4 mr-1"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PORTO 3 -->
+                
+                </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            <div class="mb-4 space-x-4">
+                <a href="https://www.linkedin.com/in/farhan-kholid-8115b9202/" class="hover:text-army-dark transition duration-150" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5 inline-block"></i></a>
+                <a href="https://www.instagram.com/frhnkhld_" class="hover:text-army-dark transition duration-150" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5 inline-block"></i></a>
+                <a href="https://github.com/frhnkhld" class="hover:text-army-dark transition duration-150" aria-label="GitHub"><i data-lucide="github" class="w-5 h-5 inline-block"></i></a>
+            </div>
+            <p>&copy; 2025 Farhan Kholid. Retro-Modern Portfolio.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
